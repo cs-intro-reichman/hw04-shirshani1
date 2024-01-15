@@ -1,7 +1,7 @@
 public class ArrayOps {
     public static void main(String[] args) {
         int[] array = { 3, 2, 1, 4 };
-        int[] array1 = { 1, 2, 3};
+        int[] array1 = { 1, 2, 3 };
         int[] array2 = { 2, 2, 1, 3, 3, 3, 4 };
         System.out.println(findMissingInt(array));
         System.out.println(secondMaxValue(array));
@@ -16,8 +16,7 @@ public class ArrayOps {
         for (int i = 0; i < n; i++) {
             if (isInArray(array, i) == false) {
                 missvalue = i;
-            } else {
-                missvalue = 1;
+
             }
         }
         return missvalue;
