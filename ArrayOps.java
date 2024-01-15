@@ -1,8 +1,8 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] array = { 1, -2, 3, -4, 5 };
+        int[] array = { 3, 2, 1 };
         int[] array1 = { 1, 2, 3 };
-        int[] array2 = { 2, 2, 1, 3, 3, 3, 4 };
+        int[] array2 = { 2, 2, 1, 3, 3, 3 };
         System.out.println(findMissingInt(array));
         System.out.println(secondMaxValue(array));
         System.out.println(containsTheSameElements(array1, array2));
@@ -56,15 +56,19 @@ public class ArrayOps {
     }
 
     public static boolean isSorted(int[] array) {
-        int chekingup = Integer.MIN_VALUE;
-        int chekingdown = Integer.MAX_VALUE;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > chekingup) {
-                chekingup = array[i];
-            } else if (array[i] < chekingdown) {
-                chekingdown = array[i];
-            } else {
-                return false;
+
+        if (array[0] > array[1]) {
+            for (int i = 1; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    return false;
+                }
+            }
+        } else {
+            for (int i = 1; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    return false;
+                }
+
             }
 
         }
