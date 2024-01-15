@@ -23,17 +23,20 @@ public class ArrayOps {
 
     public static int secondMaxValue(int[] array) {
         int Max = array[0];
-        int secondMax = array[0];
         int[] array1 = new int[array.length - 1];
         int count = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] > Max) {
+                array1[count] = Max;
                 Max = array[i];
+                count++;
             } else {
+
                 array1[count] = array[i];
                 count++;
             }
         }
+        int secondMax = array1[0];
         for (int j = 1; j < array1.length; j++) {
             if (array1[j] > secondMax) {
                 secondMax = array1[j];
