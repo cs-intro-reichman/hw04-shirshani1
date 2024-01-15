@@ -36,7 +36,7 @@ public class ArrayOps {
         }
         for (int j = 1; j < array1.length; j++) {
             if (array1[j] > secondMax) {
-                secondMax = array[j];
+                secondMax = array1[j];
             }
         }
 
