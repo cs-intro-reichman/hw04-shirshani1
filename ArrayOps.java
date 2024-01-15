@@ -12,10 +12,9 @@ public class ArrayOps {
 
     public static int findMissingInt(int[] array) {
         int n = array.length;
-        int missvalue = 0;
         for (int i = 0; i < n; i++) {
             if (isInArray(array, i) == false) {
-                missvalue = i;
+                return i;
 
             }
         }
