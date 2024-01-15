@@ -19,7 +19,7 @@ public class ArrayOps {
 
             }
         }
-        return missvalue;
+        return n;
     }
 
     public static int secondMaxValue(int[] array) {
