@@ -81,7 +81,21 @@ public class StringOps {
     }
 
     public static int[] allIndexOf(String string, char chr) {
-        // Write your code here:
+        int sum = 0;
+        for (int i = 0; i < string.length()-1; i++){
+            if (string.charAt(i) == chr){
+                sum++;
+            }
+        }
+        int [] arr = new int[sum];
+        int numChar = 0;
+        for (int i = 0; i < string.length()-1; i++){
+            if (string.charAt(i) == chr){
+                arr[numChar] = i;
+                numChar ++;}
+            }
+        
+        
         return new int[1];
     }
 
