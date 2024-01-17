@@ -82,21 +82,21 @@ public class StringOps {
 
     public static int[] allIndexOf(String string, char chr) {
         int sum = 0;
-        for (int i = 0; i < string.length()-1; i++){
-            if (string.charAt(i) == chr){
+        for (int i = 0; i < string.length() - 1; i++) {
+            if (string.charAt(i) == chr) {
                 sum++;
             }
         }
-        int [] arr = new int[sum];
+        int[] arr = new int[sum];
         int numChar = 0;
-        for (int i = 0; i < string.length()-1; i++){
-            if (string.charAt(i) == chr){
+        for (int i = 0; i < string.length() - 1; i++) {
+            if (string.charAt(i) == chr) {
                 arr[numChar] = i;
-                numChar ++;}
+                numChar++;
             }
-        
-        
-        return new int[1];
+        }
+
+        return arr;
     }
 
     public static char[] conversToArray(String string) {
