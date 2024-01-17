@@ -35,13 +35,13 @@ public class StringOps {
             } else {
                 if (string.charAt(i) == 'A' || string.charAt(i) == 'E' || string.charAt(i) == 'I'
                         || string.charAt(i) == 'O' || string.charAt(i) == 'U') {
-                    newString += string.charAt(i);
+                    newString += ' ';
                 } else {
                     if (string.charAt(i) == ' ') {
                         newString += string.charAt(i);
 
                     } else {
-                        if (string.charAt(i) >= 64 && string.charAt(i) <= 91) {
+                        if (string.charAt(i) > 64 && string.charAt(i) < 91) {
                             newString += (char) (string.charAt(i) + 32);
 
                         } else {
