@@ -22,7 +22,7 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String string = "HEllo World";
+        String string = "Hello World";
         System.out.println(capVowelsLowRest(string));
     }
 
@@ -36,10 +36,10 @@ public class StringOps {
                 if (Arrey[i] == ' ') {
                     Arrey[i] = ' ';
                 } else {
-                    if (Arrey[i] >= 'A' && array[i] <= 'Z') {
+                    if (Arrey[i] >= 'A' && Arrey[i] <= 'Z') {
                         Arrey[i] += 32;
                     } else {
-                        Arrey[i] = array[i];
+                        Arrey[i] = Arrey[i];
                     }
                 }
             }
