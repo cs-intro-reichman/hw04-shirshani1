@@ -27,25 +27,32 @@ public class StringOps {
     }
 
     public static String capVowelsLowRest(String string) {
-        char[] Arrey = conversToArray(string);
-        char[] array = { 'a', 'e', 'i', 'o', 'u' };
-        for (int i = 0; i < Arrey.length; i++) {
-            if (isInArray(array, Arrey[i])) {
-                Arrey[i] -= 32;
+        String newString = "";
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == 'a' || string.charAt(i) == 'e' || string.charAt(i) == 'i' || string.charAt(i) == 'o'
+                    || string.charAt(i) == 'u') {
+                newString += (char) (string.charAt(i) - 32);
             } else {
-                if (Arrey[i] == ' ') {
-                    Arrey[i] = ' ';
+                if (string.charAt(i) == 'A' || string.charAt(i) == 'E' || string.charAt(i) == 'I'
+                        || string.charAt(i) == 'O' || string.charAt(i) == 'U') {
+                    newString += string.charAt(i);
                 } else {
-                    if (Arrey[i] >= 'A' && Arrey[i] <= 'Z') {
-                        Arrey[i] += 32;
+                    if (string.charAt(i) == ' ') {
+                        newString += string.charAt(i);
+
                     } else {
-                        Arrey[i] = Arrey[i];
+                        if (string.charAt(i) >= 64 && string.charAt(i) <= 91) {
+                            newString += (char) (string.charAt(i) + 32);
+
+                        } else {
+                            newString += string.charAt(i);
+                        }
                     }
                 }
             }
         }
-        String NewString = conversToString(Arrey);
-        return NewString;
+
+        return newString;
     }
 
     public static String camelCase(String string) {
