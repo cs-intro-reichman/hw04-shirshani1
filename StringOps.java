@@ -22,7 +22,7 @@ public class StringOps {
     ////// ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String string = "Hello World";
+        String string = "One two tHRee world";
         System.out.println(capVowelsLowRest(string));
     }
 
@@ -35,11 +35,10 @@ public class StringOps {
             } else {
                 if (string.charAt(i) == 'A' || string.charAt(i) == 'E' || string.charAt(i) == 'I'
                         || string.charAt(i) == 'O' || string.charAt(i) == 'U') {
-                    newString += ' ';
+                    newString += (char) (string.charAt(i));
                 } else {
                     if (string.charAt(i) == ' ') {
-                        newString += string.charAt(i);
-
+                        newString += ' ';
                     } else {
                         if (string.charAt(i) > 64 && string.charAt(i) < 91) {
                             newString += (char) (string.charAt(i) + 32);
